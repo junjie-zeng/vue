@@ -2,7 +2,10 @@
     <div class="todo-container">
         <div class="todo-wrap">
             <!-- 添加 -->
-            <Add :add = "add"/>
+            <!-- 父子通信 普通方法 -->
+            <!-- <Add :add = "add"/> -->
+            <!-- 父子通信自定义事件 @add = "add" -->
+            <Add  @add = "add"/>
             <!-- 列表 -->
             <List :todos = "todos" :deleted = "deleted"/>
             <!-- 底部 -->
@@ -63,9 +66,12 @@ export default {
 
 /*
     -- 组件通信
+        - 普通方法：通过属性传递
+        - 自定义事件：@事件名 = “事件名” $emit('事件名')
     -- watch 深度监视数据改变
     -- localStorage本地存储，本地数据读取
     -- styel 动态绑定数据，鼠标移入移除样式修改
+
 
 */
 </script>

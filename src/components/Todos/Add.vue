@@ -6,7 +6,7 @@
 <script>
 export default {
     props:{
-        add:Function
+        //add:Function // 父子通信普通方法
     },
     data(){
         return {
@@ -27,7 +27,8 @@ export default {
                 complete:false
             }
             // 添加方法
-            add(obj)
+            //add(obj)
+            this.$emit('add',obj)
             this.name = '';
         }
     }
