@@ -4,6 +4,9 @@ import Router from 'vue-router'
 import CommentApp from '../components/Comment/CommentApp'
 // todo
 import TodosApp from '../components/Todos/TodosApp.vue'
+// user
+import UserApp from '../components/User/UserApp'
+
 Vue.use(Router)
 
 export default new Router({
@@ -17,6 +20,11 @@ export default new Router({
       path: '/todosApp',
       name: 'todosApp',
       component: TodosApp
+    },
+    {
+      path: '/userApp',
+      name: 'userApp',
+      component: UserApp
     }
   ]
 })
