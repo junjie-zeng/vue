@@ -11,7 +11,7 @@ import RouterApp from  '../components/Router/RouterApp'
 import Page1 from '../components/Router/Page1'
 import Page2 from '../components/Router/Page2'
 import Details from '../components/Router/Details'
-
+import CountVuexApp from '../components/CountVuex/CountVuexApp.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -30,6 +30,10 @@ export default new Router({
       path: '/userApp',
       name: 'userApp',
       component: UserApp
+    },
+    {
+      path:'/countAppVuex',
+      component:CountVuexApp
     },
     {
       path:'/routerApp',
