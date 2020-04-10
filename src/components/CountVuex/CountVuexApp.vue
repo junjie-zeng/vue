@@ -9,27 +9,32 @@
     </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 export default {
     mounted(){
         //console.log(this.$store)
     },
     methods:{
-        // 增加
-        increase(){
-            this.$store.dispatch('increase')
-        },
-        // 减少
-        decrease(){
-            this.$store.dispatch('decrease')
-        },
-        // 奇数增加
-        oddNumber(){
-            this.$store.dispatch('oddNumber')
-        },
-        // 异步增加
-        asyncAdd(){
-            this.$store.dispatch('asyncAdd')
-        }
+
+        // action多了减少冗余可以通过mapActions进行映射
+        ...mapActions(['increase','decrease','oddNumber','asyncAdd']),
+        
+        // // 增加
+        // increase(){
+        //     this.$store.dispatch('increase')
+        // },
+        // // 减少
+        // decrease(){
+        //     this.$store.dispatch('decrease')
+        // },
+        // // 奇数增加
+        // oddNumber(){
+        //     this.$store.dispatch('oddNumber')
+        // },
+        // // 异步增加
+        // asyncAdd(){
+        //     this.$store.dispatch('asyncAdd')
+        // }
     },
     computed:{
         // 数字类型
