@@ -1,15 +1,19 @@
 <template>
     <ul class="todo-main">
         <!-- 列表项 -->
-        <Item v-for = "(todo,index) in todos" :todo = "todo" :index = "index" :key = "index" :deleted = "deleted"/>
+        <Item v-for = "(todo,index) in todos" :todo = "todo" :index = "index" :key = "index" />
     </ul>
 </template>
 <script>
+
+import {mapState} from 'vuex'
 import Item from './Item'
 export default {
     props:{
-        todos:Array,
-        deleted:Function
+      
+    },
+    computed:{
+        ...mapState(['todos'])
     },
     components:{
         Item

@@ -12,7 +12,6 @@ export default {
     props:{// 指定属性名和属性值的类型
         todo:Object,
         index:Number,
-        deleted:Function
     },
     data(){
         return{
@@ -35,7 +34,7 @@ export default {
         deleteItem(){
             const { todo,deleted,index} = this
             if(window.confirm( `确定删除${todo.name}?`)){
-                deleted(index);
+               this.$store.dispatch('deleteItem',index)
             }
         }
     }

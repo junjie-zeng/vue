@@ -4,9 +4,10 @@
     </div>
 </template>
 <script>
+import { mapActions} from 'vuex'
 export default {
     props:{
-        //add:Function // 父子通信普通方法
+        
     },
     data(){
         return {
@@ -14,7 +15,7 @@ export default {
         }
     },
     methods:{
-
+        //...mapActions(['addTodo'])
         addTodo(){
             const { name,add}  = this;
             if(!name){
@@ -28,7 +29,8 @@ export default {
             }
             // 添加方法
             //add(obj)
-            this.$emit('add',obj)
+            //this.$emit('add',obj)
+            this.$store.dispatch('addTodo',obj)
             this.name = '';
         }
     }

@@ -10,33 +10,43 @@
         </div>
 </template>
 <script>
+import storageUtils from './utils/storageUtil'
+import {mapGetters,mapState} from 'vuex'
 export default {
     props:{
-        deleteAllTodos:Function,
-        checkAll:Function,
-        todos:Array
+      
     },
     computed:{
-        completeSize(){
-            return  this.todos.reduce((total,todo)=> total + (todo.complete ? 1 :0 ),0)
-        },
+        ...mapGetters(['completeSize']), // ,'check'
+        ...mapState(['todos']),
+  
         selectAll:{
             // 决定是否勾选
             get(){
                 return this.completeSize == this.todos.length && this.completeSize > 0;
+                //return this.check
             },
             // 点击了全选checkbox  value是当前checkbox的选中状态(true/false)
             set(value){
-                this.checkAll(value)
+               this.$store.dispatch('checkAll',value)
             }
         }
     },
     methods:{
         deleteAllComplete(){
             if(window.confirm('确定清除已完成的任务？')){
-                this.deleteAllTodos()
+              this.$store.dispatch('deleteAllComplete')
             }
         }
+    },
+    watch:{
+        todos:{
+            deep:true, // 深度监视
+            
+            // 将工具函数封装进行统一管理
+            handler:storageUtils.setTodos
+        }
+
     }
 }
 </script>

@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import CommentApp from '../components/Comment/CommentApp'
 // todo
 import TodosApp from '../components/Todos/TodosApp.vue'
+import TodosAppVuex from '../components/TodosVuex/TodosAppVuex.vue'
 // user
 import UserApp from '../components/User/UserApp'
 // 模拟嵌套路由
@@ -29,7 +30,7 @@ export default new Router({
     {
       path: '/todosAppVuex',
       name: 'todosAppVuex',
-      component: TodosApp
+      component: TodosAppVuex
     },
     {
       path: '/userApp',
