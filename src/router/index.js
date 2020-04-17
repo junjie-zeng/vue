@@ -27,6 +27,11 @@ export default new Router({
       component: TodosApp
     },
     {
+      path: '/todosAppVuex',
+      name: 'todosAppVuex',
+      component: TodosApp
+    },
+    {
       path: '/userApp',
       name: 'userApp',
       component: UserApp

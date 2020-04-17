@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 // CountVuex组件需要的store
 import countVuexStore from './components/CountVuex/countVuexStore'
+// todoVuex组件的store
+import todoStore from './components/TodosVuex/store'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -13,7 +15,8 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
-  store:countVuexStore // CountVuex组件需要的store
+  //store:countVuexStore // CountVuex组件需要的store
+  store:todoStore // todoVuex组件的store
 })
 
 
