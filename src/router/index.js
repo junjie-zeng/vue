@@ -13,6 +13,7 @@ import Page1 from '../components/Router/Page1'
 import Page2 from '../components/Router/Page2'
 import Details from '../components/Router/Details'
 import CountVuexApp from '../components/CountVuex/CountVuexApp.vue'
+import AdvancedFeatures from '../components/AdvancedFeatures'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +41,10 @@ export default new Router({
     {
       path:'/countAppVuex',
       component:CountVuexApp
+    },
+    {
+      path:'/advancedFeatures',
+      component:AdvancedFeatures
     },
     {
       path:'/routerApp',
