@@ -24,18 +24,27 @@
             <li v-for = "(item,index) in list" :key = "index">{{item}}</li>
         </ul>
         <button @click="addItem">添加</button>
+        <hr>
+        <h4>Mixin</h4>
+        {{mixinTitle}}
+        <button @click="run">Run</button>
     </div>
 </template>
 <script>
 
     import slotDemo from './slotDemo'
     import inputCustom from './inputCustom'
+    import myMixin from './myMixin.js'
     export default {
+        mixins:[myMixin],
         data(){
             return{
                 name:'自定义v-model',
                 list:[1,2,3]
             }
+        },
+        created(){
+            console.log("parent component...")
         },
         methods:{
            addItem(){

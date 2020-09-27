@@ -18,6 +18,7 @@
 </template>
 <script>
 export default {
+    props:['name','age'],
     data(){
         return{
             users:[]
@@ -32,17 +33,26 @@ export default {
                 {id:3,name:'库库'},
             ]
         },100)
+        console.log('在路由中，如果 props 被设置为 true，this.$route.params 将会被设置为组件属性',this.name)
+        // console.log('在路由中，如果 props 被设置为 true，this.$route.params 将会被设置为组件属性',this.age)
     },
     methods:{
         // 编程式路由导航
         detailPush(id){
             //console.log(this.$router)
            // console.log(this.$route)
-            this.$router.push(`/routerApp/page2/details/${id}`) // 路径需完整，不然会报错
+            // this.$router.push(`/routerApp/page2/${this.name}/details/${id}`) // 路径需完整，不然会报错
+            // 命名路由方式跳转
+            this.$router.push({
+                name:'details',
+                params:{
+                    id
+                }
+            })
 
         },
         detailReplace(id){
-             this.$router.replace(`/routerApp/page2/details/${id}`)
+             this.$router.replace(`/routerApp/page2/${this.name}/details/${id}`)
         },
         goBack(){
             this.$router.back();

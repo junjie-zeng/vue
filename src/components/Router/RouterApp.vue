@@ -1,7 +1,8 @@
 <template>
     <div class="container">
         <router-link to = "/routerApp/page1" class="btn btn-default">页面一</router-link>
-        <router-link to = "/routerApp/page2" class="btn btn-primary">页面二</router-link>
+        <!-- <router-link to = "/routerApp/page2/abc" class="btn btn-primary">页面二</router-link> -->
+        <router-link :to = "{name:'page2',params:{name:'abc'}}" class="btn btn-primary">页面二</router-link>
         <!-- 用来显示路由组件页面 -->
         
         <router-view></router-view>
@@ -14,8 +15,8 @@ export default {
 }
 
 /*
-    --- $router : 代表路由器（功能对象）
-    --- $route  : 代表当前路由组件（只存储了一些数据）
+    --- $router : 代表路由器（功能对象）路由实例对象
+    --- $route  : 代表当前路由组件（只存储了一些数据）路由信息对象
     --- <router-link> 用于生成路由链接
     --- <router-view> 以用来显示路由组件页面
     --- <keep-alive> 缓存路由（如果对数据的实时性没有太大的要求可采用路由缓存）
@@ -38,7 +39,7 @@ export default {
     }
     .container{
         margin: 0px auto;
-        width: 500px;
+        /* width: 500px; */
         margin-top: 20px;
     }
     .page{
