@@ -55,7 +55,8 @@ export default {
              this.$router.replace(`/routerApp/page2/${this.name}/details/${id}`)
         },
         goBack(){
-            this.$router.back();
+            // this.$router.back();
+            this.$router.go(-1)
         }
     }
 }

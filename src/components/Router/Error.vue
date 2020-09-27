@@ -1,7 +1,7 @@
 <template>
-    <p>
+    <h1>
         错误页
-    </p>
+    </h1>
 </template>
 <script>
 export default {

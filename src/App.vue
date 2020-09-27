@@ -2,11 +2,13 @@
   <div id="app">
     <!-- 导航 -->
     <div class="nav">
+      
+      <router-link to = "/">评论</router-link>
       <router-link to = "/todosApp">todosApp</router-link>
       <router-link to = "/todosAppVuex">todosAppVuex</router-link>
       <router-link to = "/userApp">userApp</router-link>
       <router-link to = "/countAppVuex">countAppVuex</router-link>
-      <router-link to = "/routerApp/page1">嵌套路由</router-link>
+      <router-link to = "/routerApp/page1">路由</router-link>
       <router-link to = "/advancedFeatures">高级特性</router-link>
     </div>
     <!--  -->

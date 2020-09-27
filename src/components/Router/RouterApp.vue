@@ -11,6 +11,11 @@
 </template>
 <script>
 export default {
+    mounted(){
+        window.onhashchange = function(event){
+            console.log(event)
+        }
+    }
     
 }
 
