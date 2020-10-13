@@ -16,6 +16,7 @@ import Page2 from '../components/Router/Page2'
 import Details from '../components/Router/Details'
 import CountVuexApp from '../components/CountVuex/CountVuexApp.vue'
 import AdvancedFeatures from '../components/AdvancedFeatures'
+import Directive from '../components/Directive'
 
 
 Vue.use(Router)
@@ -49,7 +50,12 @@ export default new Router({
     },
     {
       path:'/advancedFeatures',
-      component:AdvancedFeatures
+      component:AdvancedFeatures 
+    },
+    {
+      path:'/directive',
+      name:'directive',
+      component:Directive 
     },
     {
       path:'/routerApp',
@@ -57,7 +63,7 @@ export default new Router({
       component:RouterApp,
       children:[
         {
-          path:'/routerApp/page1', // path最左侧的/永远代表根路由
+          path:'/routerApp/page1', // path最左侧的/永远代表根路由 
           component:Page1,
           children:[
             {
