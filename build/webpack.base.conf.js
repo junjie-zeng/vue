@@ -24,6 +24,7 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  // entry:utils.entries, // 多页面使用
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

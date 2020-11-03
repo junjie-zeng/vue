@@ -66,6 +66,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       }
     ])
   ]
+  // .concat(utils.htmlPlugin()) // 用于多页面
 })
 
 module.exports = new Promise((resolve, reject) => {
