@@ -2,12 +2,22 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+// 路由
 import router from './router'
+// bootstrap vue
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 // CountVuex组件需要的store
 import countVuexStore from './components/CountVuex/countVuexStore'
 // todoVuex组件的store
 import todoStore from './components/TodosVuex/store'
 Vue.config.productionTip = false
+
+// 使用
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
 
 /* eslint-disable no-new */
 new Vue({

@@ -17,6 +17,7 @@ import Details from '../components/Router/Details'
 import CountVuexApp from '../components/CountVuex/CountVuexApp.vue'
 import AdvancedFeatures from '../components/AdvancedFeatures'
 import Directive from '../components/Directive'
+import BootstrapVue from '../components/BootstrapVue'
 
 
 Vue.use(Router)
@@ -56,6 +57,11 @@ export default new Router({
       path:'/directive',
       name:'directive',
       component:Directive 
+    },
+    {
+      path:'/bootstrapVue',
+      name:'bootstrapVue',
+      component:BootstrapVue
     },
     {
       path:'/routerApp',

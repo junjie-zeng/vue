@@ -11,6 +11,10 @@
       <router-link to = "/routerApp/page1">路由</router-link>
       <router-link to = "/advancedFeatures">高级特性</router-link>
       <router-link :to = "{name:'directive'}">自定义指令</router-link>
+      <router-link :to = "{name:'bootstrapVue'}">Bootstrap Vue</router-link>
+
+
+      
     </div>
     <!--  -->
     <div style="padding:20px">
