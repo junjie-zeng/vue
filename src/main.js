@@ -8,7 +8,7 @@ import router from './router'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import '../static/css/custom.css'
 // CountVuex组件需要的store
 import countVuexStore from './components/CountVuex/countVuexStore'
 // todoVuex组件的store

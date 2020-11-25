@@ -1,0 +1,70 @@
+ .we-item-search .drop-item {
+    position: relative;
+    width: 80px;
+    /* float: left; */
+}
+
+.we-select-box {
+    width: 100%;
+    float: left;
+    border: solid 1px rgba(10,20,30,.15);
+    background: #ffffff;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 8px;
+    border-radius: 4px;
+}
+
+
+/* .btn-secondary{
+    background: #fff;
+    color: black;
+}
+.btn-secondary:hover,.btn-secondary:active{
+    background: #fff;
+    color: black;
+} */
+.we-drop-list {
+    top: 32px;
+    max-height: 320px;
+    left: 5px;
+    right: 5px;
+}
+
+.we-item-search .drop-item .dropdown-menu {
+    left: 0;
+    right: 0;
+}
+.dropdown-menu {
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(10,20,30,.08);
+    border: solid 1px rgba(10,20,30,.03);
+}
+/*
+.btn-secondary:not(:disabled):not(.disabled):active, 
+.btn-secondary:not(:disabled):not(.disabled).active, 
+.show > .btn-secondary.dropdown-toggle {
+    color: #60666d;
+    background-color: #ffffff;
+    border-color: #dadcdd;
+}
+
+.btn-secondary:hover {
+    color: #60666d;
+    background-color: #ffffff;
+    border-color: #dadcdd;
+}
+
+.we-drop-list{ top:32px; max-height:320px; left:5px; right:5px;}
+.we-drop-list li{ width:100%; float:left;}
+.we-drop-list li a{ width:100%; float:left; line-height:30px; padding:0 15px; box-sizing:border-box;}
+.we-drop-list li a:hover{ background:rgba(10,20,30,.06);}
+.we-drop-list li.search-block{ width:100%; float:left; padding:0 15px; box-sizing:border-box;}
+.we-drop-list li a.staff-list em{ width:100%; float:left; font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.we-drop-full{ width:100% !important;}
+.we-drop-list-theme{ width:100%; float:left; line-height:30px; padding:0 15px; box-sizing:border-box;}
+.we-drop-list-theme:hover{ background:rgba(10,20,30,.06);}
+.we-drop-list-theme em{ float:left; margin-right:10px; line-height:30px; color:rgba(10,20,30,.75);}
+.we-drop-list-theme a{ width:auto !important; float:left; font-size:12px !important; padding:0 5px !important; background:none !important; opacity:0;}
+.we-drop-list-theme:hover a{ opacity:0.8;} */
