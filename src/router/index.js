@@ -22,7 +22,7 @@ import BootstrapVue from '../components/BootstrapVue'
 
 Vue.use(Router)
 
-export default new Router({
+const router =  new Router({
   // mode: 'history',
   routes: [
     {
@@ -110,3 +110,12 @@ export default new Router({
     }
   ]
 })
+
+console.log(router)
+// 全局的路由守卫
+// router.beforeEach((to, form ,next)=>{
+//   console.log(to)
+//   console.log(form)
+//   next()
+// })
+export default router

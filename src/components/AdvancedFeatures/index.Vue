@@ -3,6 +3,7 @@
         <!-- 自定义v-model -->
         {{name}}
         <input-custom v-model="name"></input-custom>
+        <model-vue  v-if="ifShow"  v-model="ifShow" ></model-vue>
         <hr>
         <h4>插槽</h4>
        
@@ -34,11 +35,13 @@
 
     import slotDemo from './slotDemo'
     import inputCustom from './inputCustom'
+    import modelVue from './modelVue'
     import myMixin from './myMixin.js'
     export default {
         mixins:[myMixin],
         data(){
             return{
+                ifShow:true,
                 name:'自定义v-model',
                 list:[1,2,3]
             }
@@ -58,7 +61,8 @@
         },
         components:{
             slotDemo,
-            inputCustom
+            inputCustom,
+            modelVue
         }
     }
 </script>

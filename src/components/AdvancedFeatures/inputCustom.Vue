@@ -8,7 +8,7 @@ export default {
     model:{
         prop:'name',
         event:'ipt'
-    },
+    }, 
     props:['name'],
     data(){
         return{

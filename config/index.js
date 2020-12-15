@@ -10,12 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // vue设置代理，用以解决跨域问题
     proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
+    // 设置端口号
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
-    autoOpenBrowser: false,
+    // 启动时自动打开浏览器
+    autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
@@ -45,11 +48,13 @@ module.exports = {
 
   build: {
     // Template for index.html
+    // 配置打包后入口.html文件的名称以及文件夹名称
     index: path.resolve(__dirname, '../dist/index.html'),
 
-    // Paths
+    // Paths，配置打包后生成的文件名称和路径
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    // 配置打包后.html引用静态资源的路径，一般设置为 './'
     assetsPublicPath: '/',
 
     /**
@@ -64,6 +69,7 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
+    // 是否开发gzip压缩，以提升加载速度
     productionGzip: false,
     productionGzipExtensions: ['js', 'css'],
 

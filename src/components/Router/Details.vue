@@ -13,7 +13,7 @@ export default {
         }
     },
     mounted(){
-        console.log()
+        console.log("detail mounted ...")
         // $route 代表路由组件（从该路由组件中获取param参数）*1是因为取出来的是一个字符串，所以进行隐式转换
         const id = this.$route.params.id * 1
         this._getData(id);
@@ -33,6 +33,9 @@ export default {
             },100)
 
         }
+    },
+    beforeRouteUpdate (to,form,next){ // 守卫
+        console.log(to.params.id)
     },
     watch:{
         $route:{
