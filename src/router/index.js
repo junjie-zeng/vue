@@ -51,7 +51,11 @@ const router =  new Router({
     },
     {
       path:'/advancedFeatures',
-      component:AdvancedFeatures 
+      component:AdvancedFeatures,
+      beforeEnter:(to,from,next)=>{
+        console.log("路由独享的守卫 ...")
+        next()
+      } 
     },
     {
       path:'/directive',
@@ -111,11 +115,23 @@ const router =  new Router({
   ]
 })
 
-console.log(router)
 // 全局的路由守卫
-// router.beforeEach((to, form ,next)=>{
-//   console.log(to)
-//   console.log(form)
-//   next()
-// })
+router.beforeEach((to, form ,next)=>{
+  console.log('全局的路由守卫  ...')
+  next()
+})
+
+router.beforeResolve((to,form,next)=>{
+  console.log('全局解析守卫 ...')
+  next()
+})
+
+router.afterEach((to,form,next)=>{
+  console.log('全局后置钩子 ...')
+})
+
+
+
+
+
 export default router

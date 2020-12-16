@@ -13,11 +13,21 @@ import '../static/css/custom.css'
 import countVuexStore from './components/CountVuex/countVuexStore'
 // todoVuex组件的store
 import todoStore from './components/TodosVuex/store'
+// 全局常量
+import constant from '../src/const/const'
+
+// 指令
+import * as directives from './directives'
+Object.keys(directives).forEach(k=>Vue.directive(k,directives[k]))
+
 Vue.config.productionTip = false
 
 // 使用
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+
+// 使用全局常量
+Vue.use(constant)
 
 /* eslint-disable no-new */
 new Vue({

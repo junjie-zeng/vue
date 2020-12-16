@@ -29,6 +29,16 @@
         <h4>Mixin</h4>
         {{mixinTitle}}
         <button @click="run">Run</button>
+        <hr>
+        <h4>在组件中使用全局常量</h4>
+        {{global.title}}
+        <hr>
+        <h5>计算属性</h5>
+        {{getName}}
+        <hr>
+        <h5>指令</h5>
+        <input v-focus type="text" placeholder="自动会获取光标"/>
+        <input type="text" placeholder="不会获取光标">
     </div>
 </template>
 <script>
@@ -44,6 +54,12 @@
                 ifShow:true,
                 name:'自定义v-model',
                 list:[1,2,3]
+            }
+        },
+        computed:{
+            getName(){
+                console.log("...... ",this.name)
+                return this.name
             }
         },
         created(){
@@ -63,6 +79,18 @@
             slotDemo,
             inputCustom,
             modelVue
+        },
+        beforeRouteEnter(to,form,next){
+            console.log('beforeRouteEnter ...') 
+            next()
+        },
+        beforeRouteUpdate(to,form,next){
+            console.log('beforeRouteUpdate ...')
+            next()
+        },
+        beforeRouteLeave(to,form,next){
+            console.log('beforeRouteLeave ...')
+            next()
         }
     }
 </script>
