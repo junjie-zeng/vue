@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <router-link to = "/routerApp/page1" class="btn btn-default">页面一</router-link>
+        <router-link to = "/routerApp/page1" class="btn btn-default" exact-active-class = "route-active">页面一</router-link>
         <!-- <router-link to = "/routerApp/page2/abc" class="btn btn-primary">页面二</router-link> -->
-        <router-link :to = "{name:'page2',params:{name:'abc'}}" class="btn btn-primary">页面二</router-link>
-        <!-- 用来显示路由组件页面 -->
+        <router-link :to = "{name:'page2',params:{name:'abc'}}" class="btn btn-primary" exact-active-class = "route-active">页面二</router-link>
         
+        <!-- 用来显示路由组件页面 -->
         <router-view></router-view>
         
     </div>
@@ -15,6 +15,9 @@ export default {
         window.onhashchange = function(event){
             console.log(event)
         }
+
+        
+
     }
     
 }
@@ -39,8 +42,11 @@ export default {
 </script>
 <style>
     /* 根据选中的路由自定义一个选中效果 */
-    .router-link-exact-active{
+    /* .router-link-exact-active{
         border: solid;
+    } */
+    .route-active{
+         border:solid 3px pink;
     }
     .container{
         margin: 0px auto;
@@ -49,5 +55,11 @@ export default {
     }
     .page{
         margin-top: 20px;
+    }
+
+    a{
+           
+        border-color: #FFF;
+        outline: none;
     }
 </style>

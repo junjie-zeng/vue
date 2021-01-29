@@ -47,6 +47,9 @@ export default {
                 name:'details',
                 params:{
                     id
+                },
+                query:{
+                    q:'query参数'
                 }
             })
 
