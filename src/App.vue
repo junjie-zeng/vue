@@ -12,6 +12,7 @@
       <router-link to = "/advancedFeatures">高级特性</router-link>
       <router-link :to = "{name:'directive'}">自定义指令</router-link>
       <router-link :to = "{name:'bootstrapVue'}">Bootstrap Vue</router-link>
+      <router-link :to = "{name:'zujiantongxin'}">组件通信</router-link>
 
 
       

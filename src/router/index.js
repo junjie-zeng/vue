@@ -18,6 +18,7 @@ import CountVuexApp from '../components/CountVuex/CountVuexApp.vue'
 import AdvancedFeatures from '../components/AdvancedFeatures'
 import Directive from '../components/Directive'
 import BootstrapVue from '../components/BootstrapVue'
+import ZuJianTongXin from '../components/ZuJianTongXin'
 
 
 Vue.use(Router)
@@ -66,6 +67,11 @@ const router =  new Router({
       path:'/bootstrapVue',
       name:'bootstrapVue',
       component:BootstrapVue
+    },
+    {
+      path:'/zujiantongxin',
+      name:'zujiantongxin',
+      component:ZuJianTongXin
     },
     {
       path:'/routerApp',

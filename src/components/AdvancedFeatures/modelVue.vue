@@ -16,6 +16,9 @@ export default {
 
         }
     },
+    mounted(){
+        console.log("子组件挂载")
+    },
     methods:{
         close(){
             this.$emit('ipt',false)

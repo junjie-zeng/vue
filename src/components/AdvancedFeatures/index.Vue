@@ -39,6 +39,11 @@
         <h5>指令</h5>
         <input v-focus type="text" placeholder="自动会获取光标"/>
         <input type="text" placeholder="不会获取光标">
+        <h5>动态增加属性</h5>
+        {{obj.name}}
+        <input type="text" v-model="obj.name">
+        <h5>modelVue</h5>
+        <modelVue @hook:mounted = "getLife"/>
     </div>
 </template>
 <script>
@@ -53,7 +58,8 @@
             return{
                 ifShow:true,
                 name:'自定义v-model',
-                list:[1,2,3]
+                list:[1,2,3],
+                obj:{}
             }
         },
         computed:{
@@ -62,8 +68,16 @@
                 return this.name
             }
         },
+        beforeCreate(){
+            console.log("beforeCreate",this.data)
+        },
         created(){
             console.log("parent component...")
+        },
+        mounted(){
+            // this.obj.name = '测试动态添加的属性'
+            // this.$set(this.obj,'name','测试动态添加的属性')
+           this.obj = Object.assign({},this.obj,{name:'测试动态添加的属性'})
         },
         methods:{
            addItem(){
@@ -73,6 +87,9 @@
                    let ul = this.$refs.list
                    console.log(ul.childNodes.length)
                })
+           },
+           getLife(){
+               console.log("触发 ...")
            }
         },
         components:{
