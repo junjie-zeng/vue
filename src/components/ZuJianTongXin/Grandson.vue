@@ -16,6 +16,8 @@
         mounted(){
             this.$listeners.updateNmae()
             console.log(this.$listeners)
+
+            
         }
 
     }
